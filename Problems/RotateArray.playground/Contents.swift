@@ -21,11 +21,10 @@ class Solution {
         let last = nums.popLast()
         nums.insert(last ?? 0, at: k + 1)
     }
+
 }
 
 let solution = Solution()
 var myArray = [1,2,3,4,5,6,7]
 // solution.rotate(&myArray, 0)
-solution.rotateOneDigit(&myArray, 0)
 
-print(390 % 400)
