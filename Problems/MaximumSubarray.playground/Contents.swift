@@ -46,8 +46,22 @@ class Solution {
         
         return "\(resultString):\(timeArray[1]):\(timeArray[2].prefix(2))"
     }
+    
+    func restoreString(_ s: String, _ indices: [Int]) -> String {
+            var sCopy: [String] = Array(arrayLiteral: s)
+            let sArray = Array(s)
+            var auxIndex = 0
+            
+            for index in indices {
+                sCopy[index] = "\(sArray[auxIndex])"
+                auxIndex += 1
+            }
+            
+            return sCopy.joined(separator: "")
+        }
 }
 
 let solution = Solution()
 // solution.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
-solution.timeConversion(s: "04:59:59AM")
+// solution.timeConversion(s: "04:59:59AM")
+print(solution.restoreString("codeleet", [4,5,6,7,0,2,1,3]))
